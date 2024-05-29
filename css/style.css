@@ -21,12 +21,15 @@
 body{
     background-color: var(--whiteBG);
 }
+html {
+    scroll-behavior: smooth;
+}
 .header_container {
     width: 100%;
     height: 80px;
     background-color: var(--white);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     position: relative;
     padding-left: 40px;
@@ -35,8 +38,15 @@ body{
     margin-right: auto;
     box-shadow: 2px 2px 10px 0 #ddd;
 }
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
 #logo {
     width: 125px;
+    margin-left: 40px;
 }
 nav {
     position: relative;
@@ -122,7 +132,7 @@ header nav ul li a:hover {
     margin-top: 30px;
     text-align: center;
     margin-right: 30px;
-    margin-top: 40px;
+    margin-top: 70px;
     margin-bottom: 40px;
 
 
@@ -196,7 +206,7 @@ header nav ul li a:hover {
     border-radius: 10px;
     transform: rotate(5deg);
     z-index: 2;
-    box-shadow: 0px 0px 10px 0px rgb(255, 144, 144);
+    box-shadow: 3px 3px 20px 10px #d6d5d5;
 }
 .sec1_left .rotated2 {
     background-color: var(--white);
@@ -262,6 +272,7 @@ header nav ul li a:hover {
     margin-left: 60px;
     border: 2px solid var(--defaultLinkColor);
     border-radius: 5px;
+    box-shadow: 2px 2px 14px 4px #ddd;
 }
 
 
@@ -299,10 +310,11 @@ header nav ul li a:hover {
     margin-left: 160px;
     margin-top: 20px;
 }
-.se3_left h1 {
+.se3_left .header_palier {
     font-size: 25px;
     color: var(--red);
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+    margin-top: -11;
 }
 .se3_right {
     display: flex;
@@ -318,6 +330,7 @@ header nav ul li a:hover {
     margin-top: 12px;
     position: absolute;
     left: 137px;
+    box-shadow: -3px 2px 3px 0px #898989;
 }
 .shadow {
     width: 45%;
@@ -332,20 +345,36 @@ header nav ul li a:hover {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 30px 30px;
+    position: relative;
+    
 }
 .palier1{
     background-color: #ffffff;
-    width: 250px;
-    height: 150px;
+    width: 235px;
+    height: 135px;
     border-radius: 2px;
     border-bottom: 6px solid var(--red);
+    box-shadow: 2px 2px 10px 4px #ddd;
+}
+img.shape1 {
+    position: absolute;
+    left: 608px;
+    margin-top: 10px;
+}
+img.shape2 {
+    position: absolute;
+    top: 405px;
+    left: -40px;
+    z-index: -1;
 }
 .palier1 h1{
-    font-size: 25px;
+    font-size: 30px;
     color: var(--red);
     font-weight: 600;
     padding-left: 20px;
     padding-top: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 .sec3_para1 {
     font-size: 11px;
@@ -410,6 +439,7 @@ header nav ul li a:hover {
     display: flex;
     align-items: center;
     margin-bottom: 16px;
+    box-shadow: 2px 2px 10px 0px #ddd;
 }
 .respect_cont img {
     width: 28px;
@@ -471,10 +501,11 @@ header nav ul li a:hover {
     margin-bottom: 15px;
 }
 .stat p {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--white);
     text-align: center;
     white-space: pre-line;
+    font-weight: 100;
 }
 #sec5 h3 {
     font-size: 25px;
@@ -517,6 +548,7 @@ header nav ul li a:hover {
     border-radius: 8px;
     border: none;
     margin-right: -150px;
+    box-shadow: 2px 2px 10px 5px #ddd;
 }
 .profile .e_profile {
     width: 70px;
@@ -614,7 +646,9 @@ header nav ul li a:hover {
 }
 .offre_left {
     width: 49%;
-    background-color: burlywood;
+    background-color: #f9f4f4;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px 4px #ddd;
 }
 .offre_right {
     width: 48%;
@@ -739,10 +773,10 @@ header nav ul li a:hover {
     font-weight: 600;
 }
 .offre_left h3 {
-    font-size: 25px;
-    color: var(--red);
-    margin-left: 24px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 11px;
+    margin-top: 10px;
+    margin-left: 23px;
 } 
 hr {
     width: 90%;
@@ -754,7 +788,6 @@ hr {
 }
 .section_two {
     width: 90%;
-    background-color: rgb(77, 237, 160);
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
@@ -780,33 +813,87 @@ hr {
     text-decoration: underline;
 }
 .resum2 {
-    background-color: bisque;
-    width: 38%;
+    background-color: var(--white);
+    height: 150px;
+    width: 158px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-right: 25px;
-    border-radius: 8px;
+    margin-right: 2px;
+    border-radius: 25px;
+    padding-top: 10px;
+    box-shadow: 2px 2px 10px 4px #ddd;
 }
 .resum2 p {
     font-size: 15px;
     margin-top: 4px;
+    margin-left: -28px;
 }
 .resum2 img {
     margin-left: 20px;
-    margin-bottom: 4px;
+}
+.top_bar{
+    width: 80px;
+    height: 150px;
+    position: relative;
+    right: 10px;
+    bottom: 5px;
+}
+.redbar {
+    width: 35px;
+    height: 5px;
+    background-color: var(--red);
+}
+#postuler {
+    width: 120px;
+    height: 34px;
+    margin-left: 150px;
+    margin-top: 20px;
+    background-color: var(--red);
+    border-radius: 20px;
+    border: none;
+    color: var(--white);
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.other_dev {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.other_dev h3 {
+    margin-top: 15px;
+    
+}
+.show {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 21px;
+}
+.show img {
+    width: 20px;
+}
+.show p {
+    font-size: 16px;
+    text-decoration: underline;
+    margin-top: 10px;
+    margin-bottom: 17px;
 }
 /* End Section 6 */
 /* Start footer */
 .footer {
     width: 100%;
-    background-color: #1e1f1f;
+    background-color: #181818
+
+    ;
 }
 .sides {
     width: 95%;
     height: 270px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #1e1f1f;
+    background-color: #181818;
     display: flex;
     justify-content: center;
 }
